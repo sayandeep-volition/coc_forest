@@ -10,8 +10,8 @@ $value = true;
 
 
 $servername = "localhost";
-$username = "carbotli_teamvolition"; 
-$password = "jzqfZTnAxjkQ"; 
+$username = "carbotli_coc"; 
+$password = "RPq?kGz5^x8X^]a"; 
 $dbname = "carbotli_teamvolition";
 
 // $username = "root"; 
@@ -19,7 +19,7 @@ $dbname = "carbotli_teamvolition";
 // $dbname = "team_volition";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname, '3306');
+$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
