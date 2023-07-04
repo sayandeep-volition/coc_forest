@@ -271,31 +271,31 @@
   /**
    * Contact form submission
    */
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".php-email-form");
-    const sentMessage = document.querySelector(".sent-message");
-    // const loading = document.querySelector(".loading");
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const form = document.querySelector(".php-email-form");
+  //   const sentMessage = document.querySelector(".sent-message");
+  //   // const loading = document.querySelector(".loading");
 
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
+  //   form.addEventListener("submit", function (event) {
+  //     event.preventDefault();
 
-      const xhr = new XMLHttpRequest();
-      xhr.open(form.method, form.action);
-      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  //     const xhr = new XMLHttpRequest();
+  //     xhr.open(form.method, form.action);
+  //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+  //     xhr.onreadystatechange = function () {
+  //       if (xhr.readyState !== XMLHttpRequest.DONE) return;
 
-        if (xhr.status === 200) {
-          form.reset();
-          sentMessage.style.display = "block";
-        } else {
-          sentMessage.style.display = "none";
-        }
-      };
+  //       if (xhr.status === 200) {
+  //         form.reset();
+  //         sentMessage.style.display = "block";
+  //       } else {
+  //         sentMessage.style.display = "none";
+  //       }
+  //     };
 
-      const formData = new FormData(form);
-      xhr.send(new URLSearchParams(formData).toString());
-    });
-  });
+  //     const formData = new FormData(form);
+  //     xhr.send(new URLSearchParams(formData).toString());
+  //   });
+  // });
 })();

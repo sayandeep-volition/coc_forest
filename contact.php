@@ -9,7 +9,7 @@ session_start();
 $value = true;
 
 
-$servername = "localhost";
+$servername = "localhost:3306";
 $username = "carbotli_teamvolition"; 
 $password = "jzqfZTnAxjkQ"; 
 $dbname = "carbotli_teamvolition";
