@@ -46,13 +46,14 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 $id = rand();
 $assigned = "4109ae60-1160-11ed-86e6-ff92fb3808de";
+$dt = date("Y-m-d");
 // Insert form data into the database
 // $sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) 
 // VALUES ('$id','$name', '$company_name', '$phone_number', '$email', '$message')";
 
-$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose, assigned_lead_manager, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose, assigned_lead_manager, status, lead_initialized_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$insert_status = $stmt->execute([$id, $name, $company_name, $phone_number, $email, $message, $assigned, 'Lead ongoing']);
+$insert_status = $stmt->execute([$id, $name, $company_name, $phone_number, $email, $message, $assigned, 'Lead ongoing', $dt]);
 
 
 if ($insert_status) {
