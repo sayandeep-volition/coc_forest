@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -704,7 +703,7 @@ section {
   color: #fff;
 }
 
-.contacts .php-email-form {
+.contacts .php-email-form1 {
   width: 100%;
   border-top: 3px solid #0a704b;
   border-bottom: 3px solid #0a704b;
@@ -712,11 +711,11 @@ section {
   background-color: #e0e0e0;
 }
 
-.contacts .php-email-form .form-group {
+.contacts .php-email-form1 .form-group {
   padding-bottom: 8px;
 }
 
-.contacts .php-email-form .error-message {
+.contacts .php-email-form1 .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -725,11 +724,11 @@ section {
   font-weight: 600;
 }
 
-.contacts .php-email-form .error-message br+br {
+.contacts .php-email-form1 .error-message br+br {
   margin-top: 25px;
 }
 
-.contacts .php-email-form .sent-message {
+.contacts .php-email-form1 .sent-message {
   display: none;
   color: #fff;
   background: #0a704b;
@@ -738,14 +737,14 @@ section {
   font-weight: 600;
 }
 
-.contacts .php-email-form .loading {
+.contacts .php-email-form1 .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contacts .php-email-form .loading:before {
+.contacts .php-email-form1 .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -757,28 +756,28 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contacts .php-email-form input,
-.contacts .php-email-form textarea {
+.contacts .php-email-form1 input,
+.contacts .php-email-form1 textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contacts .php-email-form input:focus,
-.contacts .php-email-form textarea:focus {
+.contacts .php-email-form1 input:focus,
+.contacts .php-email-form1 textarea:focus {
   border-color: #0a704b;
 }
 
-.contacts .php-email-form input {
+.contacts .php-email-form1 input {
   height: 44px;
 }
 
-.contacts .php-email-form textarea {
+.contacts .php-email-form1 textarea {
   padding: 10px 12px;
 }
 
-.contacts .php-email-form button[type=submit] {
+.contacts .php-email-form1 button[type=submit] {
   background: #0a704b;
   border: 0;
   padding: 10px 24px;
@@ -787,7 +786,7 @@ section {
   border-radius: 4px;
 }
 
-.contacts .php-email-form button[type=submit]:hover {
+.contacts .php-email-form1 button[type=submit]:hover {
   background: #fc7a00;
 }
 
@@ -1525,9 +1524,7 @@ section {
   padding-bottom: 40px;
 }
 
-#footer .copyright {
- 
-}
+#footer .copyright {}
 
 #footer .credits {
   float: right;
