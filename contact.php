@@ -14,6 +14,10 @@ $username = "carbotli_teamvolition";
 $password = "jzqfZTnAxjkQ"; 
 $dbname = "carbotli_teamvolition";
 
+// $username = "root"; 
+// $password = ""; 
+// $dbname = "team_volition";
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -28,10 +32,12 @@ $company_name = $_POST['company_name'];
 $phone_number = $_POST['phone_number'];
 $email = $_POST['email'];
 $message = $_POST['message'];
-
+$id = rand();
 // Insert form data into the database
-$sql = "INSERT INTO leads_management (name, company_name, phone, email, purpose) 
-VALUES ('$name', '$company_name', '$phone_number', '$email', '$message')";
+$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) 
+VALUES ('$id','$name', '$company_name', '$phone_number', '$email', '$message')";
+
+echo $sql; die;
 
 if ($conn->query($sql) === TRUE) {
     $value = true;
