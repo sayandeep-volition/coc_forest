@@ -19,7 +19,7 @@ $dbname = "carbotli_teamvolition";
 // $dbname = "team_volition";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname, '3306');
 
 // Check connection
 if ($conn->connect_error) {
