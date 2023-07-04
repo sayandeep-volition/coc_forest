@@ -45,19 +45,17 @@ $phone_number = $_POST['phone_number'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $id = rand();
-
+$assigned = "4109ae60-1160-11ed-86e6-ff92fb3808de";
 // Insert form data into the database
 // $sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) 
 // VALUES ('$id','$name', '$company_name', '$phone_number', '$email', '$message')";
 
-$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) VALUES (?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose, assigned_lead_manager, status) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute([$id, $name, $company_name, $phone_number, $email, $message]);
+$insert_status = $stmt->execute([$id, $name, $company_name, $phone_number, $email, $message, $assigned, 'Lead ongoing']);
 
 
-echo "Record created successfully"; die;
-
-if ($conn->query($sql) === TRUE) {
+if ($insert_status) {
     $value = true;
     header("Location: index.php");
     
