@@ -10,13 +10,13 @@ $value = true;
 
 
 $servername = "localhost";
-// $username = "carbotli_coc"; 
-// $password = "RPq?kGz5^x8X^]a"; 
-// $dbname = "carbotli_teamvolition";
+$username = "carbotli_coc"; 
+$password = "RPq?kGz5^x8X^]a"; 
+$dbname = "carbotli_teamvolition";
 
-$username = "root"; 
-$password = ""; 
-$dbname = "team_volition";
+// $username = "root"; 
+// $password = ""; 
+// $dbname = "team_volition";
 
 // Create connection
 // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
