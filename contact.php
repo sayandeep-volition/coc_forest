@@ -19,12 +19,24 @@ $dbname = "carbotli_teamvolition";
 // $dbname = "team_volition";
 
 // Create connection
-$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+// $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+// $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // Set PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
+
+// if ($conn->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
 
 // Collect post data
 $name = $_POST['name'];
@@ -33,11 +45,17 @@ $phone_number = $_POST['phone_number'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 $id = rand();
-// Insert form data into the database
-$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) 
-VALUES ('$id','$name', '$company_name', '$phone_number', '$email', '$message')";
 
-echo $sql; die;
+// Insert form data into the database
+// $sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) 
+// VALUES ('$id','$name', '$company_name', '$phone_number', '$email', '$message')";
+
+$sql = "INSERT INTO leads_management (id, name, company_name, phone, email, purpose) VALUES (?, ?, ?, ?, ?, ?)";
+$stmt = $pdo->prepare($sql);
+$stmt->execute([$id, $name, $company_name, $phone_number, $email, $message]);
+
+
+echo "Record created successfully"; die;
 
 if ($conn->query($sql) === TRUE) {
     $value = true;
