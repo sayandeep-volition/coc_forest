@@ -122,7 +122,7 @@ echo isset($_SESSION['value']);
                         <center>
                             <h3>Get in touch today</h3>
                         </center>
-                        <form action="contact.php" method="post" role="form" class="php-email-form1">
+                        <form action="contact.php" method="post" role="form" class="php-email-form">
                             <div class="form-group mt-3">
                                 <label for="name">Name*</label>
                                 <input type="text" name="name" class="form-control" id="name" required>
