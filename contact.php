@@ -10,9 +10,9 @@ $value = true;
 
 
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "coc_data";
+$username = "carbotli_teamvolition"; 
+$password = "jzqfZTnAxjkQ"; 
+$dbname = "carbotli_teamvolition";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -30,7 +30,7 @@ $email = $_POST['email'];
 $message = $_POST['message'];
 
 // Insert form data into the database
-$sql = "INSERT INTO coc_data (name, company_name, phone_number, email, msg) 
+$sql = "INSERT INTO leads_management (name, company_name, phone, email, purpose) 
 VALUES ('$name', '$company_name', '$phone_number', '$email', '$message')";
 
 if ($conn->query($sql) === TRUE) {
