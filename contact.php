@@ -10,13 +10,13 @@ $value = true;
 
 
 $servername = "localhost";
-$username = "carbotli_coc"; 
-$password = "RPq?kGz5^x8X^]a"; 
-$dbname = "carbotli_teamvolition";
+// $username = "carbotli_coc"; 
+// $password = "RPq?kGz5^x8X^]a"; 
+// $dbname = "carbotli_teamvolition";
 
-// $username = "root"; 
-// $password = ""; 
-// $dbname = "team_volition";
+$username = "root"; 
+$password = ""; 
+$dbname = "team_volition";
 
 // Create connection
 // $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -57,12 +57,12 @@ $insert_status = $stmt->execute([$id, $name, $company_name, $phone_number, $emai
 
 if ($insert_status) {
     $value = true;
-    header("Location: index.php");
+    header("Location: index.php#msg");
     
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
   $value = false;
-  header("Location: index.php");
+  header("Location: index.php#msg");
 }
 $_SESSION['value'] = $value;
 

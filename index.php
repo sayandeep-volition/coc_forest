@@ -146,7 +146,7 @@ echo isset($_SESSION['value']);
                             </div>
                             <!-- To Dynamically show or hide the below component | Edited by Imon -->
 
-                            <div class="my-3">
+                            <div class="my-3" id="msg">
                                 <div id="success-msg" class="sent-message">We've received your query. We will contact
                                     you soon.</div>
 
